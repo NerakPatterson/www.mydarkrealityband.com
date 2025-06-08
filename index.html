@@ -44,29 +44,33 @@ no-repeat center center fixed; background-size: cover;">
   </div>
 </nav>
 <style>
-  @media (max-width: 720px) {
-    .navbar-collapse.collapse.show {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      gap: 1rem;
-      background-color: transparent;
-    }
-    .navbar-collapse.collapse.show .navbar-nav {
-      flex-direction: row;
-    }
-    .navbar-collapse.collapse.show .nav-item {
-      margin: 0 0.25rem;
-        box-sizing: border-box;
-          flex: 1 1 auto;
-          flex-wrap: wrap;
-    }
-    .navbar-collapse.collapse.show .nav-link {
-      padding: 0.5rem 0.75rem;
-         font-size: clamp(18px, 2.5vw, 20px); 
-  box-sizing: border-box;
-    }
+@media (max-width: 720px) {
+  .navbar-collapse.collapse.show {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+    background-color: transparent;
+    flex-wrap: wrap; /* allow wrapping */
   }
+  .navbar-collapse.collapse.show .navbar-nav {
+    flex-direction: row;
+    flex-wrap: wrap; /* allow wrapping inside the nav */
+  }
+  .navbar-collapse.collapse.show .nav-item {
+    margin: 0 0.25rem;
+    box-sizing: border-box;
+    flex: 1 1 auto;
+  }
+  .navbar-collapse.collapse.show .nav-link {
+    padding: 0.5rem 0.75rem;
+    font-size: clamp(18px, 2.5vw, 20px);
+    box-sizing: border-box;
+    text-align: center;
+    white-space: nowrap; /* keep link text in one line */
+  }
+}
+
     /* Base padding for fixed navbar height */
 main {
   padding-top: 56px; /* default navbar height */

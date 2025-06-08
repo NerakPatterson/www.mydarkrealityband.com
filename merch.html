@@ -44,34 +44,42 @@ no-repeat center center fixed; background-size: cover;">
   </div>
 </nav>
 <style>
-  @media (max-width: 720px) {
-    .navbar-collapse.collapse.show {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      gap: 1rem;
-      background-color: transparent;
-      padding: 0.5rem 1rem;
-    }
-    .navbar-collapse.collapse.show .navbar-nav {
-      flex-direction: row;
-    }
-    .navbar-collapse.collapse.show .nav-item {
-      margin: 0 0.5rem;
-    }
-    .navbar-collapse.collapse.show .nav-link {
-      padding: 0.5rem 0.75rem;
-    }
+@media (max-width: 720px) {
+  .navbar-collapse.collapse.show {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+    background-color: transparent;
+    flex-wrap: wrap; /* allow wrapping */
   }
+  .navbar-collapse.collapse.show .navbar-nav {
+    flex-direction: row;
+    flex-wrap: wrap; /* allow wrapping inside the nav */
+  }
+  .navbar-collapse.collapse.show .nav-item {
+    margin: 0 0.25rem;
+    box-sizing: border-box;
+    flex: 1 1 auto;
+  }
+  .navbar-collapse.collapse.show .nav-link {
+    padding: 0.5rem 0.75rem;
+    font-size: clamp(18px, 2.5vw, 20px);
+    box-sizing: border-box;
+    text-align: center;
+    white-space: nowrap; /* keep link text in one line */
+  }
+}
+
     /* Base padding for fixed navbar height */
-main {
-  padding-top: 56px; /* default navbar height */
+main, h1 {
+  padding-top: 12px; /* default navbar height */
   transition: padding-top 0.3s ease;
 }
 
 /* When navbar is expanded (menu open), increase padding-top to fit horizontal menu */
-.navbar-collapse.show ~ main {
-  padding-top: 120px; /* 56px navbar + ~64px horizontal menu */
+.navbar-collapse.show ~ main, h1 {
+  padding-top: 75px; /* 56px navbar + ~64px horizontal menu */
 }
 
 </style>

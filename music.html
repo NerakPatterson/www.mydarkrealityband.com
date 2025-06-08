@@ -11,7 +11,7 @@
 <body class="d-flex flex-column min-vh-100" style="background: url('https://wallpapers.com/images/hd/black-gothic-paisley-floral-pattern-z4yscku7z1u7o4sf.jpg') 
 no-repeat center center fixed; background-size: cover;">
 <!--Navigation Bar-->
-  <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: transparent;">
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: Transparent;">
   <div class="container-fluid">
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
@@ -43,6 +43,37 @@ no-repeat center center fixed; background-size: cover;">
     </div>
   </div>
 </nav>
+<style>
+  @media (max-width: 720px) {
+    .navbar-collapse.collapse.show {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 1rem;
+      background-color: transparent;
+      padding: 0.5rem 1rem;
+    }
+    .navbar-collapse.collapse.show .navbar-nav {
+      flex-direction: row;
+    }
+    .navbar-collapse.collapse.show .nav-item {
+      margin: 0 0.5rem;
+    }
+    .navbar-collapse.collapse.show .nav-link {
+      padding: 0.5rem 0.75rem;
+    }
+    /* Base padding for fixed navbar height */
+main {
+  padding-top: 56px; /* default navbar height */
+  transition: padding-top 0.3s ease;
+}
+
+/* When navbar is expanded (menu open), increase padding-top to fit horizontal menu */
+.navbar-collapse.show ~ main {
+  padding-top: 120px; /* 56px navbar + ~64px horizontal menu */
+}
+  }
+</style>
 <main class="flex-grow-1">
   <!-- Album cover and track listing -->
   <section class="my-5">

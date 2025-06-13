@@ -3,15 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Music</title>
+    <title>Tour</title>
     <link href="styles.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
+    <link rel="stylesheet" href="../css/general.css">
 </head>
-<body class="d-flex flex-column min-vh-100" style="background: url('https://wallpapers.com/images/hd/black-gothic-paisley-floral-pattern-z4yscku7z1u7o4sf.jpg') 
-no-repeat center center fixed; background-size: cover;">
-   <!--Navigation Bar-->
+<body>
+<!--Navigation Bar-->
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: Transparent;">
   <div class="container-fluid">
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -63,6 +62,7 @@ no-repeat center center fixed; background-size: cover;">
     .navbar-collapse.collapse.show .nav-link {
       padding: 0.5rem 0.75rem;
     }
+  }
     /* Base padding for fixed navbar height */
 main {
   padding-top: 56px; /* default navbar height */
@@ -73,46 +73,34 @@ main {
 .navbar-collapse.show ~ main {
   padding-top: 120px; /* 56px navbar + ~64px horizontal menu */
 }
-  }
+
 </style>
 <main class="flex-grow-1">
-  <!-- Album cover and track listing -->
-  <section class="my-5">
-    <div class="container mt-5 pt-5">
-      <h2 class="text-center text-white">Music</h2>
+  <!--Gig Schedule link to bandsintown-->
+  <section class="container my-5">
+    <h2 class="text-white text-center mb-4">Tour Dates</h2>
 
-      <!-- Music Block 1 -->
-      <div class="border p-4 shadow-sm bg-transparent mb-5">
-        <div class="row align-items-center">
-          <!-- Left: Image -->
-          <div class="col-lg-6 p-4">
-            <img src="https://tse4.mm.bing.net/th/id/OIP.HnfDuPvZ4UN40dd4IIWqfwHaHa?rs=1&pid=ImgDetMain"
-                 alt="Things You Should Know"
-                 class="img-fluid rounded">
-          </div>
-
-          <!-- Right: Text -->
-          <div class="col-lg-6 text-white p-4">
-            <h3>Things You Should Know</h3>
-            <p>
-              This track dives deep into the introspective journey of self-awareness. 
-              Featuring ambient melodies and rich vocals, it’s one of the most popular singles from the band.
-            </p>
-            <p><strong>Release Date:</strong> 2021</p>
-            <p><strong>Genre:</strong> Hard Rock / Grunge</p>
-
-            <a href="https://mydarkrealityband.bandcamp.com/track/things-you-should-know-single" 
-   class="btn btn-outline-light" 
-   target="_blank" 
-   rel="noopener noreferrer">
-   Purchase</a>
-          </div>
-        </div>
-      </div>
-
-    </div>
+    <a class="bit-widget-initializer"
+       data-artist-name="My Dark Reality"
+       data-display-local-dates="true"
+       data-display-past-dates="true"
+       data-auto-style="false"
+       data-text-color="#FFFFFF"
+       data-link-color="#FF0000"
+       data-background-color="rgba(0, 0, 0, 0)"
+       data-display-limit=""
+       data-display-start-time="true"
+       data-link-text-color="#FFFFFF"
+       data-display-lineup="true"
+       data-display-play-my-city="true"
+       data-separator-color="rgba(255, 255, 255, 0.5)">
+    </a>
   </section>
 </main>
+
+<!-- Include the Bandsintown script -->
+<script src="https://widget.bandsintown.com/main.min.js"></script>
+
 
 
 <!--Footer with social media links-->
@@ -140,6 +128,8 @@ main {
     </div>
   </div>
 </footer>
+<!-- Bandsintown Script) -->
+<script charset="utf-8" src="https://widget.bandsintown.com/main.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
